@@ -1,0 +1,9 @@
+.navbar.navbar-light{
+    background-color: rgb(207, 102, 60);
+}
+.navbar.navbar-light h1 {
+    color:white;
+}
+.navbar a{
+    color:white;
+}

@@ -1,0 +1,15 @@
+
+img{
+    float: left;
+    display: inline-block;
+}
+.new{
+    margin-left: 20px;
+    display: inline-block;
+    float: left;
+}
+.list-group-item.clear-fix:after {
+    content:"";
+    display: block;
+    clear: both;
+}

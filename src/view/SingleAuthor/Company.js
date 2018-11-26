@@ -1,4 +1,4 @@
-import React, { Fragment } from "react"
+import React, { Fragment } from "react";
 
 const Company = () => {
     return (
@@ -6,7 +6,7 @@ const Company = () => {
             <li className="list-group-item">
                 <h6>Company</h6>
                 <p>name:BIT</p>
-                <p>slogan:volimo programiranje</p>
+                <p>quotes:We love programming!</p>
 
             </li>
         </Fragment>
