@@ -1,10 +1,10 @@
-import React, { Fragment } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 
-const SinglePost = () => {
+const SinglePost = ({ title, body }) => {
     return (<li className="list-group-item">
-        <Link to="/home/singlePostPage">Title 1</Link>
-        <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore ...</p>
+        <Link to="/home/singlePostPage">{title}</Link>
+        <p> {body}</p>
     </li >)
 }
 
