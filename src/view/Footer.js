@@ -4,7 +4,7 @@ import "./Footer.css"
 
 const Footer = () => {
 
-    return <footer className="fixed-bottom">
+    return <footer>
         <p className="container">Copyright@ BIT 2018</p>
     </footer>
 }

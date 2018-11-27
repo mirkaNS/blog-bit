@@ -2,7 +2,8 @@ import React, { Fragment } from 'react';
 
 import "./NameSurname.css"
 
-const NameSurname = () => {
+const NameSurname = (props) => {
+    console.log(props.data)
     return (
         <Fragment>
             <h5>Single Author</h5>
@@ -10,10 +11,10 @@ const NameSurname = () => {
             <li className="list-group-item clear-fix">
                 <img src="https://via.placeholder.com/250" alt="img1" />
                 <div className="new">
-                    <h6>Name Surname</h6>
-                    <p>username:my_cool_username</p>
-                    <p>email:my_cool_email</p>
-                    <p>phone:14451782308-876</p>
+                    <h6>{props.data.name}</h6>
+                    <p>username:{props.data.username}</p>
+                    <p>email:{props.data.email}</p>
+                    <p>phone:{props.data.phone}</p>
                 </div>
             </li>
 

@@ -1,25 +1,37 @@
-import React, { Fragment } from "react";
+import React, { Fragment, Component } from "react";
 
 import { SinglePost } from "./SinglePost"
 
-const HomePage = (props) => {
-    console.log(props)
+import { fetchPosts } from "../services/PostService"
 
-    return (
-        <Fragment>
+class HomePage extends Component {
+
+    constructor(props) {
+        super(props);
+
+        this.state = {
+            postList: [],
+        }
+    };
+
+    componentDidMount() {
+        fetchPosts()
+            .then((response) => this.setState({
+                postList: response
+            }));
+    }
+    render() {
+        return (<Fragment>
 
             <h5>POSTS</h5>
             <ul className="list-group list-group-flush">
-                <SinglePost />
-                <SinglePost />
-                <SinglePost />
-                <SinglePost />
-                <SinglePost />
+                <SinglePost list={this.state.postList} />
             </ul>
 
-        </Fragment>
-    )
+        </Fragment>)
+    }
 }
+
 
 export { HomePage }
 
